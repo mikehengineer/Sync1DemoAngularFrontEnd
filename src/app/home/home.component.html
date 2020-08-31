@@ -1,9 +1,9 @@
 <div id="applicantcontainer">
      
      <div id="applicantinput">
-          <!-- binds currentApplicant (home.component.ts) to applicantDetails in (applicant-add-or-update.component.ts)
-               binds addOrUpdateApplicant (applicant-add...html) to newApplicantCreated event emitter (applicant.ad...ts) -->
-          <app-applicant-add-or-update [applicantDetails]="currentApplicant" (newApplicantCreated)="createOrUpdateApplicant($event)"></app-applicant-add-or-update>
+               <!-- binds currentApplicant (home.component.ts) to applicantDetails in (applicant-add-or-update.component.ts)
+                    binds addOrUpdateApplicant (applicant-add...html) to newApplicantCreated event emitter (applicant.ad...ts) -->
+               <app-applicant-add-or-update [applicantDetails]="currentApplicant" (newApplicantCreated)="createOrUpdateApplicant($event)"></app-applicant-add-or-update>
      </div>
 
      <div id="applicantdisplay">

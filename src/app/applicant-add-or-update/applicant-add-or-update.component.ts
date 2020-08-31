@@ -22,8 +22,8 @@ export class ApplicantAddOrUpdateComponent implements OnInit {
       id: 'undefined',
       name: '',
       email: '',
-      phoneNumber: 0,
-      loanAmount: 0
+      phoneNumber: '',
+      loanAmount: ''
     }
   }
 
