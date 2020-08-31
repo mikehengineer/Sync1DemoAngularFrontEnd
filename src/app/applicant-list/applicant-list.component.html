@@ -1,5 +1,5 @@
 <button type="button" class="btn btn-primary" (click)="newApplicant()">New Applicant</button>
-<table>
+<table id="applicants">
 <thead>
     <tr>
         <th>Name</th>
@@ -15,8 +15,12 @@
         <td>{{ applicantDetails.phoneNumber }}</td>
         <td>{{ applicantDetails.loanAmount }}</td>
         <td>
-            <a (click)="editApplicant(applicantDetails)" class="link">Edit</a>
-            <a (click)="deleteApplicant(applicantDetails)" class="link">Delete</a>
+            <tr>
+                <a (click)="editApplicant(applicantDetails)" class="link">Edit</a>
+            </tr>
+            <tr>
+                <a (click)="deleteApplicant(applicantDetails)" class="link">Delete</a>
+            </tr>
         </td>
     </tr>
 </tbody>
