@@ -1,0 +1,23 @@
+<button type="button" class="btn btn-primary" (click)="newApplicant()">New Applicant</button>
+<table>
+<thead>
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone Number</th>
+        <th>Loan Amount</th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let applicantDetails of applicantData"> 
+        <td>{{ applicantDetails.name }}</td>
+        <td>{{ applicantDetails.email }}</td>
+        <td>{{ applicantDetails.phoneNumber }}</td>
+        <td>{{ applicantDetails.loanAmount }}</td>
+        <td>
+            <a (click)="editApplicant(applicantDetails)" class="link">Edit</a>
+            <a (click)="deleteApplicant(applicantDetails)" class="link">Delete</a>
+        </td>
+    </tr>
+</tbody>
+</table>

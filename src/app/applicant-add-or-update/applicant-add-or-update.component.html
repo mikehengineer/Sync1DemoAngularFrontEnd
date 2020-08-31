@@ -1,0 +1,22 @@
+<div id = "addForm">
+    <h2>Add New Applicant</h2>
+    <form>
+        <div class = "form-group">
+            <label for="applicantName">Applicant Name</label>
+            <input type="text" id="applicantName" name="applicantName" [(ngModel)]="applicantDetails.name" class="form-control">
+        </div>
+        <div class = "form-group">
+            <label for="applicantEmail">Applicant Email</label>
+            <input type="text" id="applicantEmail" name="applicantEmail" [(ngModel)]="applicantDetails.email" class="form-control">
+        </div>
+        <div class = "form-group">
+            <label for="applicantPhoneNumber">Applicant Phone Number</label>
+            <input type="text" id="applicantPhoneNumber" name="applicantPhoneNumber" [(ngModel)]="applicantDetails.phoneNumber" class="form-control">
+        </div>
+        <div class = "form-group">
+            <label for="applicantLoanAmount">Applicant Loan Amount</label>
+            <input type="text" id="applicantLoanAmount" name="applicantLoanAmount" [(ngModel)]="applicantDetails.loanAmount" class="form-control">
+        </div>
+        <button type="button" class="btn btn-primary" (click)="addOrUpdateApplicant($event)" class="link">Add</button>
+    </form>
+</div>

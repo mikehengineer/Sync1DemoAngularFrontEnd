@@ -1,0 +1,5 @@
+<p>home works!</p>
+<app-applicant-list [applicantData]="applicantData" (editClicked)="editClicked($event)" (newClicked)="newClicked()" (applicantDeleted)="applicantDeleted($event)"></app-applicant-list>
+<!-- binds currentApplicant (home.component.ts) to applicantDetails in (applicant-add-or-update.component.ts)
+     binds addOrUpdateApplicant (applicant-add...html) to newApplicantCreated event emitter (applicant.ad...ts) -->
+<app-applicant-add-or-update [applicantDetails]="currentApplicant" (newApplicantCreated)="createOrUpdateApplicant($event)"></app-applicant-add-or-update>
