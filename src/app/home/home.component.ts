@@ -28,11 +28,9 @@ export class HomeComponent implements OnInit {
   }
 
   public createOrUpdateApplicant = function (Applicant: any){
-    console.log('inside createOrUpdateApplicant (home.component.ts)');
-    console.log('Applicant Name: ', Applicant.Name);
-    console.log('Applicant name: ', Applicant.name);
+
     let applicantWithId;
-    applicantWithId = _.find(this.applicantDetails, (el => el.id === Applicant.id));
+    applicantWithId = _.find(this.applicantData, (el => el.id === Applicant.id));
 
     if (applicantWithId){
       const updateIndex = _.findIndex(this.applicantData, {id: applicantWithId.id});
