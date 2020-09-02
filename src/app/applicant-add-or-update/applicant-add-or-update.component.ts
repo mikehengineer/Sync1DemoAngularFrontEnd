@@ -34,8 +34,6 @@ export class ApplicantAddOrUpdateComponent implements OnInit {
   public addOrUpdateApplicant = function (event){
     //emit applicant object (applicantDetails) bound to html form over our eventemitter
     this.newApplicantCreated.emit(this.applicantDetails);
-    console.log('inside addorupdateapplicant');
-    console.log('applicantDetails.id:', this.applicantDetails.id);
     this.clearApplicant;
   }
 }
