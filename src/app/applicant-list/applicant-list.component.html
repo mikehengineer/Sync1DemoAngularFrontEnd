@@ -13,12 +13,16 @@
         <td>{{ applicantDetails.email }}</td>
         <td>{{ applicantDetails.phoneNumber }}</td>
         <td>{{ applicantDetails.loanAmount }}</td>
+        <td>{{ applicantDetails.softDelete }}</td>
         <td>
             <tr>
                 <a (click)="editApplicant(applicantDetails)" class="link">Edit</a>
             </tr>
             <tr>
                 <a (click)="deleteApplicant(applicantDetails)" class="link">Delete</a>
+            </tr>
+            <tr>
+                <a (click)="softDeleteApplicant(applicantDetails)" class="link">Soft Delete</a>
             </tr>
         </td>
     </tr>

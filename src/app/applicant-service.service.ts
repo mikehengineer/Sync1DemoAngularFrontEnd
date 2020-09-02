@@ -23,6 +23,8 @@ export class ApplicantServiceService {
   }
 
   public remove(data) {
+    console.log("Inside remove, data.softDelete: ", data.softDelete);
+    //its only sending the id you jack ass
     return this.http.delete(this.applicantsAPI + '/' + data.id, {headers: this.headers});
   }
 

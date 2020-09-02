@@ -7,6 +7,7 @@ import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class ApplicantListComponent implements OnInit {
   @Output() applicantDeleted = new EventEmitter<any>();
+  @Output() applicantSoftDeleted = new EventEmitter<any>();
   @Output() newClicked = new EventEmitter<any>();
   @Output() editClicked = new EventEmitter<any>();
   @Input() applicantData: Array<any>;
@@ -16,7 +17,13 @@ export class ApplicantListComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  public softDeleteApplicant(applicant){
+
+    this.applicantSoftDeleted.emit(applicant);
+  }
+
   public deleteApplicant(applicant){
+    console.log('Applicant id (in hard delete): ', applicant.id);
     this.applicantDeleted.emit(applicant);
   }
 

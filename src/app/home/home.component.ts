@@ -23,12 +23,20 @@ export class HomeComponent implements OnInit {
       name: '',
       email: '',
       phoneNumber: '',
-      loanAmount: ''
+      loanAmount: '',
+      softDelete: ''
     }
   }
 
-  public createOrUpdateApplicant = function (Applicant: any){
+  public softDeleteApplicant = function(applicant){
+    applicant.softDelete = "true";
+    var softDeleteIndex = _.findIndex(this.applicantData, {id: applicant.id});
+    this.applicantService.update(applicant).subscribe(
+      softDeleteReturn => this.applicantData.splice(softDeleteIndex, 1)
+    ); 
+  }
 
+  public createOrUpdateApplicant = function (Applicant: any){
     let applicantWithId;
     applicantWithId = _.find(this.applicantData, (el => el.id === Applicant.id));
 
@@ -39,7 +47,7 @@ export class HomeComponent implements OnInit {
       );
     } else {
       this.applicantService.add(Applicant).subscribe(
-        applicantRecord => this.applicantData.push(Applicant)
+        applicantRecord => this.applicantData.push(applicantRecord)
       );
     }
     this.currentApplicant = this.setInitialValuesForApplicant();

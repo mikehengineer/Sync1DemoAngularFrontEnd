@@ -7,7 +7,7 @@
      </div>
 
      <div id="applicantdisplay">
-          <app-applicant-list [applicantData]="applicantData" (editClicked)="editClicked($event)" (newClicked)="newClicked()" (applicantDeleted)="applicantDeleted($event)"></app-applicant-list>
+          <app-applicant-list [applicantData]="applicantData" (editClicked)="editClicked($event)" (newClicked)="newClicked()" (applicantDeleted)="applicantDeleted($event)" (applicantSoftDeleted)="softDeleteApplicant($event)"></app-applicant-list>
      </div>
 
 </div>
